@@ -26,15 +26,16 @@ export default {
 
         // 是否显示个人主页的URL地址
         home_page: "https://dedenlabs.github.io/flexiresume",
-        // home_page: "https://resume.deden.cn", 
 
         // 是否使用CDN加载静态资源
         use_static_assets_from_cdn: true,
 
         // 静态资源CDN地址
         static_assets_cdn_base_urls: [
+            // "",
             "https://cdn.jsdelivr.net/gh/dedenLabs/flexiresume-static/",
-            "https://dedenlabs.github.io/flexiresume-static/"
+            "https://dedenlabs.github.io/flexiresume-static/",
+            "https://demo.deden.cn:8080/",
         ],
 
         // 静态资源目录白名单
@@ -47,7 +48,7 @@ export default {
         // 生成二维码的URL地址
         qrcode: true,// 不指定特定URL会默认根据当前URL地址动态生成二维码,或直接填写URL地址生成固定的二维码
         // qrcode: "https://resume.deden.cn/game",// 生成固定的URL地址二维码
-        qrcode_msg: "扫描查看体验更好",//二维码提示信息
+        qrcode_msg: "",//二维码提示信息
     } as IHeaderInfo,
     skill_level:
     {
@@ -281,7 +282,7 @@ export default {
 - #### <span style="font-size: 1.8em;">🌐深耕TypeScript/JavaScript技术生态</span>，精通<span style="font-size: 1.5em;">⚛️React/Vue</span>🖋️框架体系与<span style="font-size: 1.5em;">Node.js</span>全栈开发，主导设计过<span style="font-size: 1.5em;">企业级脚手架工具链与CI/CD⚙️自动化部署方案</span>，擅长通过Wasm加速🚀、SSR/SSG渲染优化实现毫秒级性能突破⚡。
 - #### 📱 多平台开发经验：微信/抖音/支付宝等平台的🎮小游戏和小程序开发经验，H5打包📦 iOS/Android并成功提审上线完整经验✅。
 ### 🌟在高复杂度Web图形领域具备独特优势：
-- #### 基于<span style="font-size: 1.5em;">Canvas/WebGL</span>深度定制<span style="font-size: 1.5em;">🕹️CocosCreator/Laya/Egret/PixiJS/Three.js/Unity</span>等游戏引擎，构建百万DAU级🎯游戏项目；
+- #### 跨引擎开发经验：基于<span style="font-size: 1.5em;">Canvas/WebGL</span>深度定制<span style="font-size: 1.5em;">🕹️CocosCreator/Laya/Egret/PixiJS/Three.js/Unity</span>等游戏引擎，构建百万DAU级🎯游戏项目；
 - #### 主导研发<span style="font-size: 1.5em;">Node.js</span>游戏服务集群🖥️与CDN智能预热系统📡，突破高并发技术瓶颈🚀。
 - #### 📊 体系化解决方案沉淀：持续输出前端工程化🔧、Hybrid混合开发优化📱及Web安全防护🛡️方案，在模块化架构设计📦、微前端实施🔄、跨端渲染引擎开发🌐等领域沉淀丰富实战经验💼。
 `

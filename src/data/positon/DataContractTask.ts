@@ -24,7 +24,7 @@ export default {
 - #### 📈 <span style="font-size: 1.5em;">成本优化专家</span>：通过🚀自动化测试框架+📊智能回归验证，降低传统迁移方案50%+人力投入，实现💰ROI可量化的技术改造。
 
 `
-},   
+    },
     contract_task: {// 外包服务
         "type": "base",
         name: "技术顾问服务 / 资源转换服务 / 外包服务",
@@ -234,82 +234,92 @@ export default {
 图片解码消耗降低了 <span style="font-size:1.5rem">**n倍到30倍+**</span>。 
 不仅仅只是**性能和体验**的提升，开发工程师与美术之间的**协作工作流**也大幅度提升，
 <span style="font-size:1.5rem;color:#0cc">无法估量</span>。*
-
-> > <table>
-> >     <thead>
-> >         <tr>
-> >             <th><strong>优化方案</strong></th>
-> >             <th><strong>总帧数</strong></th>
-> >             <th><strong>体积</strong></th>
-> >             <th><strong>内存</strong></th>
-> >             <th><strong>特效</strong></th>
-> >             <th><strong>体验</strong></th>
-> >         </tr>
-> >     </thead>
-> >     <tbody>
-> >         <tr>
-> >             <td><strong>未优化 - 保证画质</strong></td>
-> >             <td>398帧</td>
-> >             <td><strong><span style="font-size:1.2em;color:#a00">76MB</span></strong></td>
-> >             <td><strong><span style="font-size:1.2em;color:#f00">408MB</span></strong> = 428(长) × 314(高) × 4(字节) × 398(帧数) / 1024 / 1024 × 2 (两只精灵)</td>
-> >             <td>不支持通道和滤镜</td>
-> >             <td>内存大、加载慢、位图解码卡顿</td>
-> >         </tr>
-> >         <tr>
-> >             <td><strong>砍帧方案 - 降低流畅度</strong></td>
-> >             <td>100帧(<strong>砍帧</strong>)</td>
-> >             <td><strong><span style="font-size:1.2em;color:#a00">19MB</span></strong></td>
-> >             <td><strong><span style="font-size:1.2em;color:#f00">102MB</span></strong> = 408MB / 4</td>
-> >             <td>不支持通道和滤镜</td>
-> >             <td>内存大、加载慢、位图解码卡顿</td>
-> >         </tr>
-> >     </tbody>
-> > </table>
-> > 
-> > ---
-> > <strong>资源转换服务-解决方案-高清流畅无砍帧👇</strong>
-> > ---
-> > 
-> > <table>
-> >     <thead>
-> >         <tr>
-> >             <th><strong>优化方案</strong></th>
-> >             <th><strong>总帧数</strong></th>
-> >             <th><strong>体积</strong></th>
-> >             <th><strong>内存</strong></th>
-> >             <th><strong>特效</strong></th>
-> >             <th><strong>体验</strong></th>
-> >         </tr>
-> >     </thead>
-> >     <tbody> 
-> >         <tr>
-> >             <td><strong>矢量图方案</strong></td>
-> >             <td>398帧</td>
-> >             <td><span style="font-size:1.2em;color:#0a0"><strong>490KB</strong></span></td>
-> >             <td>大于<strong><span style="font-size:1.2em;color:#aa0">490KB</span></strong>小于<span style="font-size:1.2em;color:#aa0"><strong>490KB × 10</strong></span></td>
-> >             <td>支持通道和滤镜</td>
-> >             <td>内存极小、加载极快、性能一般，需考虑低端机渲染性能</td>
-> >         </tr>
-> >         <tr>
-> >             <td><strong>位图方案</strong></td>
-> >             <td>398帧</td>
-> >             <td><strong><span style="font-size:1.2em;color:#0a0">596KB</span></strong></td>
-> >             <td><span style="font-size:1.2em;color:#aa0"><strong>13MB</strong></span>(可与矢量图结合降低内存) = (1024 × 1024 × 4 + 628 × 1024 × 4) × 2 (两只精灵)</td>
-> >             <td>支持通道和滤镜</td>
-> >             <td>内存偏大、加载快、无卡顿性能极高，需考虑内存优化</td>
-> >         </tr>
-> >         <tr>
-> >             <td><strong><span style="font-size:1.2em;color:#000">最佳方案</span><br/>(矢量/位图结合)</strong></td>
-> >             <td>398帧</td>
-> >             <td>两则之间</td>
-> >             <td>两则之间</td>
-> >             <td>支持通道和滤镜</td>
-> >             <td>内存中等、加载快、无卡顿，性能高</td>
-> >         </tr>
-> >     </tbody>
-> > </table>
-> > 
-        `
+ 
+        `,
+                                children: [
+                                    {
+                                        name: '常规方案',
+                                        content: ` 
+> <table  style="background-color:#fff0f0">
+>     <thead>
+>         <tr>
+>             <th><strong>优化方案</strong></th>
+>             <th><strong>总帧数</strong></th>
+>             <th><strong>体积</strong></th>
+>             <th><strong>内存</strong></th>
+>             <th><strong>特效</strong></th>
+>             <th><strong>体验</strong></th>
+>         </tr>
+>     </thead>
+>     <tbody>
+>         <tr>
+>             <td><strong>未优化 - 保证画质</strong></td>
+>             <td>398帧</td>
+>             <td><strong><span style="font-size:1.2em;color:#a00">76MB</span></strong></td>
+>             <td><strong><span style="font-size:1.2em;color:#f00">408MB</span></strong> = 428(长) × 314(高) × 4(字节) × 398(帧数) / 1024 / 1024 × 2 (两只精灵)</td>
+>             <td>不支持通道和滤镜</td>
+>             <td>内存大、加载慢、位图解码卡顿</td>
+>         </tr>
+>         <tr>
+>             <td><strong>砍帧方案 - 降低流畅度</strong></td>
+>             <td>100帧(<strong>砍帧</strong>)</td>
+>             <td><strong><span style="font-size:1.2em;color:#a00">19MB</span></strong></td>
+>             <td><strong><span style="font-size:1.2em;color:#f00">102MB</span></strong> = 408MB / 4</td>
+>             <td>不支持通道和滤镜</td>
+>             <td>内存大、加载慢、位图解码卡顿</td>
+>         </tr>
+>     </tbody>
+> </table>
+`
+                                    },
+                                    {
+                                        name: '超级优化方案',
+                                        content: ` 
+>  ---
+>  <strong>资源转换服务-解决方案-<span style="font-size:1.5em;color:#a0a">高清流畅无砍帧</span>👇</strong>
+>  ---
+>  
+>  <table  style="background-color:#f0fff0">
+>      <thead>
+>          <tr>
+>              <th><strong>优化方案</strong></th>
+>              <th><strong>总帧数</strong></th>
+>              <th><strong>体积</strong></th>
+>              <th><strong>内存</strong></th>
+>              <th><strong>特效</strong></th>
+>              <th><strong>体验</strong></th>
+>          </tr>
+>      </thead>
+>      <tbody> 
+>          <tr>
+>              <td><strong>矢量图方案</strong></td>
+>              <td>398帧</td>
+>              <td><span style="font-size:1.2em;color:#0a0"><strong>490KB</strong></span></td>
+>              <td>大于<strong><span style="font-size:1.2em;color:#aa0">490KB</span></strong>小于<span style="font-size:1.2em;color:#aa0"><strong>490KB × 10</strong></span></td>
+>              <td>支持通道和滤镜</td>
+>              <td>内存极小、加载极快、性能一般，需考虑低端机渲染性能</td>
+>          </tr>
+>          <tr>
+>              <td><strong>位图方案</strong></td>
+>              <td>398帧</td>
+>              <td><strong><span style="font-size:1.2em;color:#0a0">596KB</span></strong></td>
+>              <td><span style="font-size:1.2em;color:#aa0"><strong>13MB</strong></span>(可与矢量图结合降低内存) = (1024 × 1024 × 4 + 628 × 1024 × 4) × 2 (两只精灵)</td>
+>              <td>支持通道和滤镜</td>
+>              <td>内存偏大、加载快、无卡顿性能极高，需考虑内存优化</td>
+>          </tr>
+>          <tr>
+>              <td><strong><span style="font-size:1.2em;color:#000">最佳方案</span><br/>(矢量/位图结合)</strong></td>
+>              <td>398帧</td>
+>              <td>两则之间</td>
+>              <td>两则之间</td>
+>              <td>支持通道和滤镜</td>
+>              <td>内存中等、加载快、无卡顿，性能高</td>
+>          </tr>
+>      </tbody>
+>  </table>
+                `
+                                    }
+                                ]
                             },
                         ]
                     },
